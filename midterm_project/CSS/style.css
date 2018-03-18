@@ -1,0 +1,135 @@
+h2{
+  color: #515A5A;
+  padding: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: "Avenir";
+  font-size: 24px;
+}
+
+#explanation{
+  color:#515A5A;
+  font-family: "Avenir";
+  font-size: 18px;
+  margin-left: 0px;
+  margin-top:0px;
+}
+
+#notice{
+  color:#99A3A4;
+  font-family: "Avenir";
+  font-size: 18px;
+  margin-left: 0px;
+  margin-top:10px;
+}
+
+#map {
+    position: absolute;
+    right: 0px;
+    left: 340px;
+    height: 100%;
+    top: 0;
+}
+
+#sidebar {
+    position: absolute;
+    left: 0px;
+    width: 300px;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+#legend{
+  position:absolute;
+  left:1000px;
+  top:470px;
+  color:#515A5A;
+  font-family: "Avenir";
+  font-size: 12px;
+  padding:-10px;
+}
+
+#legend1{
+  background: #E9F7EF;
+  width:45px;
+  height:15px;
+  opacity: 0.4;
+}
+
+#legend2{
+  background: #A9DFBF;
+  width:45px;
+  height:15px;
+  opacity: 0.4;
+}
+
+#legend3{
+  background: #52BE80;
+  width:45px;
+  height:15px;
+  opacity: 0.4;
+}
+
+#legend4{
+  background: #1E8449;
+  width:45px;
+  height:15px;
+  opacity: 0.4;
+}
+
+#legend5{
+  background: #145A32;
+  width:45px;
+  height:15px;
+  opacity: 0.4;
+}
+
+#legend1-text{
+  position:fixed;
+  left:1100px;
+  top:525px;
+}
+
+#legend2-text{
+  position:fixed;
+  left:1100px;
+  top:552px;
+}
+
+#legend3-text{
+  position:fixed;
+  left:1100px;
+  top:579px;
+}
+
+#legend4-text{
+  position:fixed;
+  left:1100px;
+  top:606px;
+}
+
+#legend5-text{
+  position:fixed;
+  left:1100px;
+  top:633px;
+}
+
+.prev1{
+  color:#99A3A4;
+  padding: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-family: "Avenir";
+  font-size: 16px;
+}
+
+.next{
+  color:#515A5A;
+  padding: 0px;
+  margin-left: 160px;
+  margin-top: 0px;
+  font-family: "Avenir";
+  font-size: 16px;
+}
