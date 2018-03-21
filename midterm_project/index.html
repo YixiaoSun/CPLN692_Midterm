@@ -9,19 +9,18 @@
 
     <!--Left Panel-->
     <div id="sidebar">
-      <div id="explanation">
-            <h2>Hepatitis A Morbidity in Chinese Provinces (2016)</h2>
-            <p>Hepatitis A is a viral liver disease that affects many people in China.
+      <div id="explanation-header">Hepatitis A Morbidity in Chinese Provinces (2016)</div>
+      <div id="explanation1">Hepatitis A is a viral liver disease that affects many people in China.
             Applying natural break classification, the map shows the morbidity of Hep A
             in Chinese provinces. People from provinces in the west of China tend to
-            be bothered more by the epidemic, with Xinjiang having the highest morbidity. </p>
-            <p>For more detailed information, please see the popup box of each province when
-            putting your mouse over that province on the map.</p>
-            <div id="notice"><p>Notice: Due to data accessibility, the data of Hongkong,
-            Macau, and Taiwan will not be shown on the map.</p></div>
-        </div>
-        <a class="prev1" onclick="plusSlides(0)">&#10094; Previous</a>
-        <a class="next" onclick="plusSlides(1)">Next &#10095;</a>
+            be bothered more by the epidemic, with Xinjiang having the highest morbidity.</div>
+      <div id="explanation2">For more detailed information, please see the popup box of each province when
+            putting your mouse over that province on the map.</div>
+      <div id="notice">Notice: Due to data accessibility, the data of Hongkong,
+            Macau, and Taiwan will not be shown on the map.</div>
+      <br></br>
+      <button id="prev"></button>
+      <button id="next">Next ></button>
     </div>
 
     <!-- Map -->
@@ -30,15 +29,27 @@
     <!-- Legend -->
     <div id="legend">
       <ul>
-        <div id="legend-title">Hepatitis A morbidity in 2016</div>
-        <div id="legend-title">(per 100,000 people)</div>
+        <div id="legend-title1">Hepatitis A morbidity in 2016</div>
+        <div id="legend-title2">(per 100,000 people)</div>
       </ul>
       <ul><div id="legend1"></div><div id="legend1-text">Level 1: 0.24-0.68</div></ul>
       <ul><div id="legend2"></div><div id="legend2-text">Level 2: 0.68-1.48</div></ul>
       <ul><div id="legend3"></div><div id="legend3-text">Level 3: 1.48-2.94</div></ul>
       <ul><div id="legend4"></div><div id="legend4-text">Level 4: 2.94-6.77</div></ul>
       <ul><div id="legend5"></div><div id="legend5-text">Level 5: 6.77-15.15</div></ul>
-    </div>
+  </div>
+
+  <div id="legend02">
+    <ul>
+      <div id="legend2-title1"></div>
+      <div id="legend2-title2"></div>
+    </ul>
+    <ul><span class="dot1" id="dot1"></span><div id="legend21-text"></div></ul>
+    <ul><span class="dot2" id="dot2"></span><div id="legend22-text"></div></ul>
+    <ul><span class="dot3" id="dot3"></span><div id="legend23-text"></div></ul>
+    <ul><span class="dot4" id="dot4"></span><div id="legend24-text"></div></ul>
+    <ul><span class="dot5" id="dot5"></span><div id="legend25-text"></div></ul>
+</div>
 
     <!-- Javascript Imports -->
     <script src="js/leaflet.js"></script>
