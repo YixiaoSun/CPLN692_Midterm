@@ -10,7 +10,7 @@
 #explanation1{
   color:#515A5A;
   font-family: "Avenir";
-  font-size: 18px;
+  font-size: 16px;
   margin-left: 0px;
   margin-top:10px;
 }
@@ -18,17 +18,25 @@
 #explanation2{
   color:#515A5A;
   font-family: "Avenir";
-  font-size: 18px;
+  font-size: 16px;
   margin-left: 0px;
   margin-top:10px;
 }
 
-#notice{
+#notice1{
   color:#99A3A4;
   font-family: "Avenir";
-  font-size: 18px;
+  font-size: 16px;
   margin-left: 0px;
   margin-top:20px;
+}
+
+#notice2{
+  color:#99A3A4;
+  font-family: "Avenir";
+  font-size: 16px;
+  margin-left: 0px;
+  margin-top:10px;
 }
 
 #map {
@@ -60,6 +68,9 @@
 }
 
 #legend1{
+  position:fixed;
+  left:1040px;
+  top:526px;
   background: #E9F7EF;
   width:45px;
   height:15px;
@@ -67,6 +78,9 @@
 }
 
 #legend2{
+  position:fixed;
+  left:1040px;
+  top:552px;
   background: #A9DFBF;
   width:45px;
   height:15px;
@@ -74,6 +88,9 @@
 }
 
 #legend3{
+  position:fixed;
+  left:1040px;
+  top:580px;
   background: #52BE80;
   width:45px;
   height:15px;
@@ -81,6 +98,9 @@
 }
 
 #legend4{
+  position:fixed;
+  left:1040px;
+  top:606px;
   background: #1E8449;
   width:45px;
   height:15px;
@@ -88,10 +108,63 @@
 }
 
 #legend5{
+  position:fixed;
+  left:1040px;
+  top:633px;
   background: #145A32;
   width:45px;
   height:15px;
   opacity: 0.4;
+}
+
+#legend41{
+  position:fixed;
+  left:1040px;
+  top:526px;
+  background: #FDEDEC;
+  width:45px;
+  height:15px;
+  opacity: 0.4;
+}
+
+#legend42{
+  position:fixed;
+  left:1040px;
+  top:552px;
+  background: #F5B7B1;
+  width:45px;
+  height:15px;
+  opacity: 0.3;
+}
+
+#legend43{
+  position:fixed;
+  left:1040px;
+  top:580px;
+  background: #EC7063;
+  width:45px;
+  height:15px;
+  opacity: 0.3;
+}
+
+#legend44{
+  position:fixed;
+  left:1040px;
+  top:606px;
+  background: #B03A2E;
+  width:45px;
+  height:15px;
+  opacity: 0.3;
+}
+
+#legend45{
+  position:fixed;
+  left:1040px;
+  top:633px;
+  background: #78281F;
+  width:45px;
+  height:15px;
+  opacity: 0.3;
 }
 
 #legend1-text{
@@ -127,7 +200,7 @@
 #legend02{
   position:absolute;
   left:400px;
-  top:430px;
+  top:445px;
   color:#515A5A;
   font-family: "Avenir";
   font-size: 12px;
@@ -137,10 +210,7 @@
 .dot1{
   height: 9px;
   width: 9px;
-  background-color:rgba(46,134,193,0.2);
-  border-color: rgb(46,134,193);
-  border-style: solid;
-  border-width:2px;
+  background-color:rgba(46,134,193,0.4);
   border-radius: 100%;
   opacity:40%;
   position:fixed;
@@ -151,10 +221,7 @@
 .dot2{
   height: 20px;
   width: 20px;
-  background-color:rgba(46,134,193,0.2);
-  border-color: rgb(46,134,193);
-  border-style: solid;
-  border-width:2px;
+  background-color:rgba(46,134,193,0.4);
   border-radius: 100%;
   opacity:40%;
   position:fixed;
@@ -165,10 +232,7 @@
 .dot3{
   height:34px;
   width:34px;
-  background-color:rgba(46,134,193,0.2);
-  border-color: rgb(46,134,193);
-  border-style: solid;
-  border-width:2px;
+  background-color:rgba(46,134,193,0.4);
   border-radius: 100%;
   opacity:40%;
   position:fixed;
@@ -179,10 +243,7 @@
 .dot4{
   height: 45px;
   width: 45px;
-  background-color:rgba(46,134,193,0.2);
-  border-color: rgb(46,134,193);
-  border-style: solid;
-  border-width:2px;
+  background-color:rgba(46,134,193,0.4);
   border-radius: 100%;
   opacity:40%;
   position:fixed;
@@ -193,10 +254,62 @@
 .dot5{
   height: 60px;
   width: 60px;
-  background-color:rgba(46,134,193,0.2);
-  border-color: rgb(46,134,193);
-  border-style: solid;
-  border-width:2px;
+  background-color:rgba(46,134,193,0.4);
+  border-radius: 100%;
+  opacity:40%;
+  position:fixed;
+  left:421px;
+  top:625px;
+}
+
+.dot21{
+  height: 9px;
+  width: 9px;
+  background-color:rgba(140,142,211,0.4);
+  border-radius: 100%;
+  opacity:40%;
+  position:fixed;
+  left:445px;
+  top:485px;
+}
+
+.dot22{
+  height: 20px;
+  width: 20px;
+  background-color:rgba(140,142,211,0.4);
+  border-radius: 100%;
+  opacity:40%;
+  position:fixed;
+  left:440px;
+  top:502px;
+}
+
+.dot23{
+  height:34px;
+  width:34px;
+  background-color:rgba(140,142,211,0.4);
+  border-radius: 100%;
+  opacity:40%;
+  position:fixed;
+  left:434px;
+  top:530px;
+}
+
+.dot24{
+  height: 45px;
+  width: 45px;
+  background-color:rgba(140,142,211,0.4);
+  border-radius: 100%;
+  opacity:40%;
+  position:fixed;
+  left:429px;
+  top:572px;
+}
+
+.dot25{
+  height: 60px;
+  width: 60px;
+  background-color:rgba(140,142,211,0.4);
   border-radius: 100%;
   opacity:40%;
   position:fixed;
@@ -249,6 +362,16 @@
   position:sticky;
   left:280px;
   top:700px;
+  font-family: "Avenir";
+  font-size: 16px;
+  border:none;
+}
+
+#pageNumber{
+  color:#515A5A;
+  position:sticky;
+  left:135px;
+  top:720px;
   font-family: "Avenir";
   font-size: 16px;
   border:none;
