@@ -84,7 +84,7 @@ var dataset = "https://raw.githubusercontent.com/YixiaoSun/HepAData/master/HepAD
     $("#prev").prop("disabled",true);
     $("#next").text("Next >");
     $("#prev").prop("disabled",false);
-    $("#pageNumber").text("1/6");
+    $("#pageNumber").text("1/7");
     $("#legend-title1").text("Hepatitis A morbidity in 2016");
     $("#legend-title2").text("(per 100,000)");
     $("#legend1-text").text("Level 1: 0.24-0.68");
@@ -153,7 +153,7 @@ var dataset = "https://raw.githubusercontent.com/YixiaoSun/HepAData/master/HepAD
   $("#prev").prop("disabled",false);
   $("#next").text("Next >");
   $("#prev").prop("disabled",false);
-  $("#pageNumber").text("2/6");
+  $("#pageNumber").text("2/7");
   $("#legend-title1").text("Hepatitis A morbidity in 2016");
   $("#legend-title2").text("(per 100,000)");
   $("#legend1-text").text("Level 1: 0.24-0.68");
@@ -190,7 +190,7 @@ var dataset = "https://raw.githubusercontent.com/YixiaoSun/HepAData/master/HepAD
   $("#prev").prop("disabled",false);
   $("#next").text("Next >");
   $("#prev").prop("disabled",false);
-  $("#pageNumber").text("3/6");
+  $("#pageNumber").text("3/7");
   $("#legend-title1").text("Hepatitis A morbidity in 2016");
   $("#legend-title2").text("(per 100,000)");
   $("#legend1-text").text("Level 1: 0.24-0.68");
@@ -278,7 +278,7 @@ var dataset = "https://raw.githubusercontent.com/YixiaoSun/HepAData/master/HepAD
   $("#prev").prop("disabled",false);
   $("#next").text("Next >");
   $("#prev").prop("disabled",false);
-  $("#pageNumber").text("4/6");
+  $("#pageNumber").text("4/7");
   $("#legend-title1").text("Hepatitis A morbidity change");
   $("#legend-title2").text("between 2012 and 2016");
   $("#legend1-text").text("Level 1 (decrease): ");
@@ -328,6 +328,7 @@ var dataset = "https://raw.githubusercontent.com/YixiaoSun/HepAData/master/HepAD
     });
   };
 
+
   var plotMarkers5 = function(data) {
     _.each(data,function(object){
       object.addTo(map);
@@ -350,7 +351,7 @@ var dataset = "https://raw.githubusercontent.com/YixiaoSun/HepAData/master/HepAD
   $("#prev").prop("disabled",false);
   $("#next").text("Next >");
   $("#next").prop("disabled",false);
-  $("#pageNumber").text("5/6");
+  $("#pageNumber").text("5/7");
   $("#legend-title1").text("Hepatitis A morbidity change");
   $("#legend-title2").text("between 2012 and 2016");
   $("#legend1-text").text("Level 1 (decrease): ");
@@ -373,15 +374,35 @@ var dataset = "https://raw.githubusercontent.com/YixiaoSun/HepAData/master/HepAD
 
   /*page 6*/
   var renderThePage6= function(){
-  $("#explanation-header").text("Hepatitis A Morbidity Change (2012-2016) and Health Education Rate (2016) in Chinese Provinces -  A Closer Look");
-  $("#explanation1").text("In Gansu Province and Qinghai Province in the west, where health education rates are high, the morbidity seemed to have decreased over the 5 years.");
+  $("#explanation-header").text("Hepatitis A Morbidity Change (2012-2016) and Health Education Rate (2016) - in Provinces with Increasing Morbidity");
+  $("#explanation1").text("For provinces with rising Hep A morbidity, health education rates seem to be low.");
+  $("#explanation2").text("For more detailed information, please see the popup box of each province when clicking on the circle markers.");
+  $("#notice").text("Notice: Due to data accessibility, the data of Hongkong, Macau, and Taiwan will not be shown on the map.");
+  $("#next").text("Next>");
+  $("#next").prop("disabled",false);
+  $("#prev").text("< Previous");
+  $("#prev").prop("disabled",false);
+  $("#pageNumber").text("6/7");
+  $("#legend-title1").text("Hepatitis A morbidity change");
+  $("#legend-title2").text("between 2012 and 2016");
+  $("#legend1-text").text("Level 1 (decrease): ");
+  $("#legend2-text").text("Level 2 (decrease): ");
+  $("#legend3-text").text("Level 3 (decrease): ");
+  $("#legend4-text").text("Level 4 (increase): ");
+  $("#legend5-text").text("Level 5 (increase): ");
+  };
+
+  /*page 7*/
+  var renderThePage7= function(){
+  $("#explanation-header").text("Hepatitis A Morbidity Change (2012-2016) and Health Education Rate (2016) - in Provinces with Decreasing Morbidity");
+  $("#explanation1").text("For provinces with dropping Hep A morbidity, health education rates seem to be high.");
   $("#explanation2").text("For more detailed information, please see the popup box of each province when clicking on the circle markers.");
   $("#notice").text("Notice: Due to data accessibility, the data of Hongkong, Macau, and Taiwan will not be shown on the map.");
   $("#next").text("");
   $("#next").prop("disabled",true);
   $("#prev").text("< Previous");
   $("#prev").prop("disabled",false);
-  $("#pageNumber").text("6/6");
+  $("#pageNumber").text("7/7");
   $("#legend-title1").text("Hepatitis A morbidity change");
   $("#legend-title2").text("between 2012 and 2016");
   $("#legend1-text").text("Level 1 (decrease): ");
@@ -409,6 +430,14 @@ $(document).ready(function() {
     feature=parsedData.features;
     markers1 = makeMarkers2(feature);
     markers2 = makeMarkers5(feature);
+    var filterFeature6= _.filter(feature,function(feature){
+        return feature.properties.changeL>0;
+    });
+    var filterMarkers6 = makeMarkers5(filterFeature6);
+    var filterFeature7= _.filter(feature,function(feature){
+        return feature.properties.changeL<0;
+    });
+    var filterMarkers7 = makeMarkers5(filterFeature7);
 
     /*set click for the next page*/
     $("button#next").click(function(e){
@@ -473,7 +502,15 @@ $(document).ready(function() {
         /*page 6*/
         case 6:
           renderThePage6();
-          map.setView([30,118],5);
+          removeMarkers2(markers2);
+          plotMarkers5 (filterMarkers6) ;
+        break;
+
+        /*page 6*/
+        case 7:
+          renderThePage7();
+          removeMarkers2(filterMarkers6);
+          plotMarkers5 (filterMarkers7) ;
         break;
       }
     });
@@ -482,10 +519,18 @@ $(document).ready(function() {
     $("button#prev").click(function(e){
       pageNumber=pageNumber-1;
       switch(pageNumber){
+        /*page 7*/
+        case 7:
+          renderThePage7();
+          removeMarkers2(filterMarkers6);
+          plotMarkers5 (filterMarkers7) ;
+        break;
+
         /*page 6*/
         case 6:
           renderThePage6();
-          map.setView([30,118],5);
+          removeMarkers2(filterMarkers7);
+          plotMarkers5 (filterMarkers6) ;
         break;
 
         /*page 5*/
@@ -497,7 +542,7 @@ $(document).ready(function() {
             style: myStyle4,
             filter: myFilter4
           }).addTo(map);
-          removeMarkers5(markers2);
+          removeMarkers5(filterMarkers6);
           plotMarkers5(markers2);
         break;
 
